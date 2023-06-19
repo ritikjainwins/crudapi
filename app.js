@@ -2,10 +2,11 @@ const express = require("express");
 const connectDb = require("./db/conn");
 const app = express();
 const port = process.env.port || 3000;
+const router = require("./routers/emp");
 
-app.get("/",(req,res)=>{
-    res.send("home page")
-});
+app.use(express.json());
+app.use(router);
+
 
 const start = ()=>{
     try {
