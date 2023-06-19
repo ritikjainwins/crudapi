@@ -1,9 +1,8 @@
-const ValidationForPost = require("../routers/validation/");
+const {ValidationForPost,ValidationForPatch} = require("../routers/validation");
 
 const validateEmp = (schema) =>{
     return async(req,res,next)=>{
-    const validateData =  schema.validate(req.boby);
-    // console.log(validateData);
+    const validateData =  schema.validate(req.body);
     if(validateData.error){
         res.status(403).send(validateData);
     }
@@ -13,4 +12,4 @@ const validateEmp = (schema) =>{
     }
 } 
 
-module.exports = {validateEmp,ValidationForPost}
+module.exports = {validateEmp,ValidationForPost,ValidationForPatch}

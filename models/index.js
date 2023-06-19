@@ -16,6 +16,12 @@ const empSchema = mongoose.Schema({
     city:{
         type:String,
         default:"Mohali"
+    },
+    create_by:{
+        type:String
+    },
+    update_by:{
+        type:String
     }
 },
 { timestamps: true });

@@ -1,4 +1,4 @@
-const EmpData = require("../models/index");
+const EmpData = require("../models");
 
 class Employer {
     constructor(){
